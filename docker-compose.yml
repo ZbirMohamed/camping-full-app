@@ -1,0 +1,34 @@
+services:
+   campdb:
+     image: mariadb:11
+     container_name: dbC
+     environment:
+       MARIADB_ROOT_PASSWORD: test
+       MARIADB_DATABASE: campBdd
+     volumes:
+       - camp-volume:/var/lib/mysql
+     ports:
+       - "3037:3036"
+     healthcheck:
+       test: [ "CMD", "healthcheck.sh", "--connect", "--innodb_initialized" ]
+       start_period: 10s
+       interval: 10s
+       timeout: 5s
+       retries: 3
+
+   camp-service:
+     build: ./camp
+     container_name: camp-service
+     ports:
+       - "8080:8080"
+     expose:
+       - "8080"
+     environment:
+       - MARIADB_URL=jdbc:mariadb://campdb:3306/campBdd?createDatabaseIfNotExist=true
+     depends_on:
+       campdb:
+         condition: service_healthy
+
+
+volumes:
+  camp-volume:
