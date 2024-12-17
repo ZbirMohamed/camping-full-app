@@ -78,7 +78,6 @@
             <artifactId>mariadb-java-client</artifactId>
             <scope>runtime</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
