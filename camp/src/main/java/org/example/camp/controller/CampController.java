@@ -2,15 +2,12 @@ package org.example.camp.controller;
 
 
 import org.example.camp.domain.dto.CampDto;
-import org.example.camp.domain.dto.CreateCampDto;
-import org.example.camp.domain.entities.CampEntity;
-import org.example.camp.repository.CampRepository;
 import org.example.camp.service.CampService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.http.HttpResponse;
+
 import java.util.List;
 
 @RestController
