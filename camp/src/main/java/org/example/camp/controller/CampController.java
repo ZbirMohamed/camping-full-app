@@ -49,6 +49,9 @@ public class CampController {
     public ResponseEntity<CampDto> updateCamp(@PathVariable Integer id, @RequestBody CampDto campDto){
         if(!campService.isExisting(id))
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+        campDto.setId(id);
+
         CampDto updateCamp =campService.save(campDto);
         return new ResponseEntity<>(updateCamp,HttpStatus.OK);
     }
