@@ -5,6 +5,8 @@ import org.example.bookingservice.domain.dto.BookingDto;
 import org.example.bookingservice.service.BookingService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +18,9 @@ public class BookingController {
     private BookingService bookingService;
 
     public BookingController(BookingService bookingService) {
+
         this.bookingService = bookingService;
+        System.out.println("initialising the book Service");
     }
 
     @GetMapping
@@ -59,5 +63,11 @@ public class BookingController {
 
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+
+    @GetMapping("/auth")
+    public Authentication getAuthenticatedObject(Authentication authentication) {
+       return authentication;
+    }
+
 
 }

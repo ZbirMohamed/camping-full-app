@@ -54,12 +54,63 @@ services:
      expose:
        - "8081"
      environment:
+       - KEYCLOAK_ISSUER_URI=http://localhost:8085/realms/camping-app-realm
+       - KEYCLOAK_JWK_URI=http://keycloak:8080/realms/camping-app-realm/protocol/openid-connect/certs
        - MARIADB_URL=jdbc:mariadb://bookingDB:3306/bookingBdd?createDatabaseIfNotExist=true
      depends_on:
        bookingDB:
          condition: service_healthy
 
+   postgres:
+     image: postgres:15
+     container_name: postgres
+     volumes:
+       - postgres_data:/var/lib/postgresql/data
+     environment:
+       POSTGRES_DB: keycloak
+       POSTGRES_USER: keycloak
+       POSTGRES_PASSWORD: k1234
+     ports:
+       - '5432:5432'
+     expose:
+       - '5432'
+     healthcheck:
+       test: "exit 0"
+
+   pgadmin4:
+     image: dpage/pgadmin4
+     container_name: pgadmin4
+     restart: always
+     ports:
+       - "80:80"
+     environment:
+       PGADMIN_DEFAULT_EMAIL: med@gmail.com
+       PGADMIN_DEFAULT_PASSWORD: azer
+     volumes:
+       - pgadmin_data:/var/lib/pgadmin
+
+   keycloak:
+     image: quay.io/keycloak/keycloak:latest
+     environment:
+       KC_DB: postgres
+       KC_DB_URL: jdbc:postgresql://postgres:5432/keycloak
+       KC_DB_USERNAME: keycloak
+       KC_DB_PASSWORD: k1234
+       KEYCLOAK_ADMIN: admin
+       KEYCLOAK_ADMIN_PASSWORD: admin
+     command:
+       - start-dev
+     restart: always
+     ports:
+       - '8085:8080'
+     expose:
+       - '8085'
+     depends_on:
+       postgres:
+         condition: service_healthy
 
 volumes:
   camp-volume:
   booking-volume:
+  postgres_data:
+  pgadmin_data:

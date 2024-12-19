@@ -1,0 +1,258 @@
+{
+  "authorities": [
+    {
+      "authority": "SCOPE_profile"
+    },
+    {
+      "authority": "SCOPE_email"
+    }
+  ],
+  "details": {
+    "remoteAddress": "172.23.0.1",
+    "sessionId": null
+  },
+  "authenticated": true,
+  "principal": {
+    "tokenValue": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJDSmN5c214NEx5X0g5WFR5akRCcTRRX01uZEJDUzlIM1l3VENGZUVZZTFzIn0.eyJleHAiOjE3MzQ2NDY3ODEsImlhdCI6MTczNDY0NjQ4MSwianRpIjoiZjUxMzE0M2EtOTUyNC00N2E5LThmMGItNDY4ZTMyY2Y4Y2M3IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDg1L3JlYWxtcy9jYW1waW5nLWFwcC1yZWFsbSIsImF1ZCI6WyJyZWFsbS1tYW5hZ2VtZW50IiwiYWNjb3VudCJdLCJzdWIiOiJkYjViNDEwOS1kZWY0LTQzYjgtYTM4Ny00MGFlYTJmYjA0MGEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJjYW1waW5nLWNsaWVudCIsInNpZCI6IjI1NjhhNTczLWU5MWEtNDgwNS1iZDBlLTE0NWU2MWI4OTVjMiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1jYW1waW5nLWFwcC1yZWFsbSIsIkFETUlOIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJyZWFsbS1tYW5hZ2VtZW50Ijp7InJvbGVzIjpbIm1hbmFnZS11c2VycyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiTW9oYW1lZCBBbWluZSBaYmlyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlcjEiLCJnaXZlbl9uYW1lIjoiTW9oYW1lZCBBbWluZSIsImZhbWlseV9uYW1lIjoiWmJpciIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIn0.C3k5TvK9-7vl7_Go8TlHCzgGZe9FyGg74eyX0vhpRftpV58y9PgDSTF4zLarI2k65xeeovaO_wVeQEifbmOfLKHDP0KR-cNNrGV7RyqGFoN-DIAvvTrCqYQxgzbNt3kbIZIxw6MhyV5ENaxnZmJoBJRrKdxSA6ir7Vz7sHdTGv4kW1AcXQ4BarJ9GUTD_OJ_GtN5BOAY1EKMFZjtV4Z2vCbdBUbLNqxZq2FX0L3L33DC8lZi_VeHIxxL9zH0_DcbC9sveLF6AWyEJhnl03ivFenF9H0G1xfad4BpX_t8aUe700J7_xdusrkTXOA8pJYGQ7q5K2wuteF4pVC9AoOMzA",
+    "issuedAt": "2024-12-19T22:14:41Z",
+    "expiresAt": "2024-12-19T22:19:41Z",
+    "headers": {
+      "kid": "CJcysmx4Ly_H9XTyjDBq4Q_MndBCS9H3YwTCFeEYe1s",
+      "typ": "JWT",
+      "alg": "RS256"
+    },
+    "claims": {
+      "sub": "db5b4109-def4-43b8-a387-40aea2fb040a",
+      "resource_access": {
+        "realm-management": {
+          "roles": [
+            "manage-users"
+          ]
+        },
+        "account": {
+          "roles": [
+            "manage-account",
+            "manage-account-links",
+            "view-profile"
+          ]
+        }
+      },
+      "email_verified": false,
+      "allowed-origins": [
+        "/*"
+      ],
+      "iss": "http://localhost:8085/realms/camping-app-realm",
+      "typ": "Bearer",
+      "preferred_username": "user1",
+      "given_name": "Mohamed Amine",
+      "sid": "2568a573-e91a-4805-bd0e-145e61b895c2",
+      "aud": [
+        "realm-management",
+        "account"
+      ],
+      "acr": "1",
+      "realm_access": {
+        "roles": [
+          "offline_access",
+          "default-roles-camping-app-realm",
+          "ADMIN",
+          "uma_authorization"
+        ]
+      },
+      "azp": "camping-client",
+      "scope": "profile email",
+      "name": "Mohamed Amine Zbir",
+      "exp": "2024-12-19T22:19:41Z",
+      "iat": "2024-12-19T22:14:41Z",
+      "family_name": "Zbir",
+      "jti": "f513143a-9524-47a9-8f0b-468e32cf8cc7",
+      "email": "user1@gmail.com"
+    },
+    "subject": "db5b4109-def4-43b8-a387-40aea2fb040a",
+    "id": "f513143a-9524-47a9-8f0b-468e32cf8cc7",
+    "issuer": "http://localhost:8085/realms/camping-app-realm",
+    "audience": [
+      "realm-management",
+      "account"
+    ],
+    "notBefore": null
+  },
+  "credentials": {
+    "tokenValue": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJDSmN5c214NEx5X0g5WFR5akRCcTRRX01uZEJDUzlIM1l3VENGZUVZZTFzIn0.eyJleHAiOjE3MzQ2NDY3ODEsImlhdCI6MTczNDY0NjQ4MSwianRpIjoiZjUxMzE0M2EtOTUyNC00N2E5LThmMGItNDY4ZTMyY2Y4Y2M3IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDg1L3JlYWxtcy9jYW1waW5nLWFwcC1yZWFsbSIsImF1ZCI6WyJyZWFsbS1tYW5hZ2VtZW50IiwiYWNjb3VudCJdLCJzdWIiOiJkYjViNDEwOS1kZWY0LTQzYjgtYTM4Ny00MGFlYTJmYjA0MGEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJjYW1waW5nLWNsaWVudCIsInNpZCI6IjI1NjhhNTczLWU5MWEtNDgwNS1iZDBlLTE0NWU2MWI4OTVjMiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1jYW1waW5nLWFwcC1yZWFsbSIsIkFETUlOIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJyZWFsbS1tYW5hZ2VtZW50Ijp7InJvbGVzIjpbIm1hbmFnZS11c2VycyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiTW9oYW1lZCBBbWluZSBaYmlyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlcjEiLCJnaXZlbl9uYW1lIjoiTW9oYW1lZCBBbWluZSIsImZhbWlseV9uYW1lIjoiWmJpciIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIn0.C3k5TvK9-7vl7_Go8TlHCzgGZe9FyGg74eyX0vhpRftpV58y9PgDSTF4zLarI2k65xeeovaO_wVeQEifbmOfLKHDP0KR-cNNrGV7RyqGFoN-DIAvvTrCqYQxgzbNt3kbIZIxw6MhyV5ENaxnZmJoBJRrKdxSA6ir7Vz7sHdTGv4kW1AcXQ4BarJ9GUTD_OJ_GtN5BOAY1EKMFZjtV4Z2vCbdBUbLNqxZq2FX0L3L33DC8lZi_VeHIxxL9zH0_DcbC9sveLF6AWyEJhnl03ivFenF9H0G1xfad4BpX_t8aUe700J7_xdusrkTXOA8pJYGQ7q5K2wuteF4pVC9AoOMzA",
+    "issuedAt": "2024-12-19T22:14:41Z",
+    "expiresAt": "2024-12-19T22:19:41Z",
+    "headers": {
+      "kid": "CJcysmx4Ly_H9XTyjDBq4Q_MndBCS9H3YwTCFeEYe1s",
+      "typ": "JWT",
+      "alg": "RS256"
+    },
+    "claims": {
+      "sub": "db5b4109-def4-43b8-a387-40aea2fb040a",
+      "resource_access": {
+        "realm-management": {
+          "roles": [
+            "manage-users"
+          ]
+        },
+        "account": {
+          "roles": [
+            "manage-account",
+            "manage-account-links",
+            "view-profile"
+          ]
+        }
+      },
+      "email_verified": false,
+      "allowed-origins": [
+        "/*"
+      ],
+      "iss": "http://localhost:8085/realms/camping-app-realm",
+      "typ": "Bearer",
+      "preferred_username": "user1",
+      "given_name": "Mohamed Amine",
+      "sid": "2568a573-e91a-4805-bd0e-145e61b895c2",
+      "aud": [
+        "realm-management",
+        "account"
+      ],
+      "acr": "1",
+      "realm_access": {
+        "roles": [
+          "offline_access",
+          "default-roles-camping-app-realm",
+          "ADMIN",
+          "uma_authorization"
+        ]
+      },
+      "azp": "camping-client",
+      "scope": "profile email",
+      "name": "Mohamed Amine Zbir",
+      "exp": "2024-12-19T22:19:41Z",
+      "iat": "2024-12-19T22:14:41Z",
+      "family_name": "Zbir",
+      "jti": "f513143a-9524-47a9-8f0b-468e32cf8cc7",
+      "email": "user1@gmail.com"
+    },
+    "subject": "db5b4109-def4-43b8-a387-40aea2fb040a",
+    "id": "f513143a-9524-47a9-8f0b-468e32cf8cc7",
+    "issuer": "http://localhost:8085/realms/camping-app-realm",
+    "audience": [
+      "realm-management",
+      "account"
+    ],
+    "notBefore": null
+  },
+  "token": {
+    "tokenValue": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJDSmN5c214NEx5X0g5WFR5akRCcTRRX01uZEJDUzlIM1l3VENGZUVZZTFzIn0.eyJleHAiOjE3MzQ2NDY3ODEsImlhdCI6MTczNDY0NjQ4MSwianRpIjoiZjUxMzE0M2EtOTUyNC00N2E5LThmMGItNDY4ZTMyY2Y4Y2M3IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDg1L3JlYWxtcy9jYW1waW5nLWFwcC1yZWFsbSIsImF1ZCI6WyJyZWFsbS1tYW5hZ2VtZW50IiwiYWNjb3VudCJdLCJzdWIiOiJkYjViNDEwOS1kZWY0LTQzYjgtYTM4Ny00MGFlYTJmYjA0MGEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJjYW1waW5nLWNsaWVudCIsInNpZCI6IjI1NjhhNTczLWU5MWEtNDgwNS1iZDBlLTE0NWU2MWI4OTVjMiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1jYW1waW5nLWFwcC1yZWFsbSIsIkFETUlOIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJyZWFsbS1tYW5hZ2VtZW50Ijp7InJvbGVzIjpbIm1hbmFnZS11c2VycyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiTW9oYW1lZCBBbWluZSBaYmlyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlcjEiLCJnaXZlbl9uYW1lIjoiTW9oYW1lZCBBbWluZSIsImZhbWlseV9uYW1lIjoiWmJpciIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIn0.C3k5TvK9-7vl7_Go8TlHCzgGZe9FyGg74eyX0vhpRftpV58y9PgDSTF4zLarI2k65xeeovaO_wVeQEifbmOfLKHDP0KR-cNNrGV7RyqGFoN-DIAvvTrCqYQxgzbNt3kbIZIxw6MhyV5ENaxnZmJoBJRrKdxSA6ir7Vz7sHdTGv4kW1AcXQ4BarJ9GUTD_OJ_GtN5BOAY1EKMFZjtV4Z2vCbdBUbLNqxZq2FX0L3L33DC8lZi_VeHIxxL9zH0_DcbC9sveLF6AWyEJhnl03ivFenF9H0G1xfad4BpX_t8aUe700J7_xdusrkTXOA8pJYGQ7q5K2wuteF4pVC9AoOMzA",
+    "issuedAt": "2024-12-19T22:14:41Z",
+    "expiresAt": "2024-12-19T22:19:41Z",
+    "headers": {
+      "kid": "CJcysmx4Ly_H9XTyjDBq4Q_MndBCS9H3YwTCFeEYe1s",
+      "typ": "JWT",
+      "alg": "RS256"
+    },
+    "claims": {
+      "sub": "db5b4109-def4-43b8-a387-40aea2fb040a",
+      "resource_access": {
+        "realm-management": {
+          "roles": [
+            "manage-users"
+          ]
+        },
+        "account": {
+          "roles": [
+            "manage-account",
+            "manage-account-links",
+            "view-profile"
+          ]
+        }
+      },
+      "email_verified": false,
+      "allowed-origins": [
+        "/*"
+      ],
+      "iss": "http://localhost:8085/realms/camping-app-realm",
+      "typ": "Bearer",
+      "preferred_username": "user1",
+      "given_name": "Mohamed Amine",
+      "sid": "2568a573-e91a-4805-bd0e-145e61b895c2",
+      "aud": [
+        "realm-management",
+        "account"
+      ],
+      "acr": "1",
+      "realm_access": {
+        "roles": [
+          "offline_access",
+          "default-roles-camping-app-realm",
+          "ADMIN",
+          "uma_authorization"
+        ]
+      },
+      "azp": "camping-client",
+      "scope": "profile email",
+      "name": "Mohamed Amine Zbir",
+      "exp": "2024-12-19T22:19:41Z",
+      "iat": "2024-12-19T22:14:41Z",
+      "family_name": "Zbir",
+      "jti": "f513143a-9524-47a9-8f0b-468e32cf8cc7",
+      "email": "user1@gmail.com"
+    },
+    "subject": "db5b4109-def4-43b8-a387-40aea2fb040a",
+    "id": "f513143a-9524-47a9-8f0b-468e32cf8cc7",
+    "issuer": "http://localhost:8085/realms/camping-app-realm",
+    "audience": [
+      "realm-management",
+      "account"
+    ],
+    "notBefore": null
+  },
+  "name": "db5b4109-def4-43b8-a387-40aea2fb040a",
+  "tokenAttributes": {
+    "sub": "db5b4109-def4-43b8-a387-40aea2fb040a",
+    "resource_access": {
+      "realm-management": {
+        "roles": [
+          "manage-users"
+        ]
+      },
+      "account": {
+        "roles": [
+          "manage-account",
+          "manage-account-links",
+          "view-profile"
+        ]
+      }
+    },
+    "email_verified": false,
+    "allowed-origins": [
+      "/*"
+    ],
+    "iss": "http://localhost:8085/realms/camping-app-realm",
+    "typ": "Bearer",
+    "preferred_username": "user1",
+    "given_name": "Mohamed Amine",
+    "sid": "2568a573-e91a-4805-bd0e-145e61b895c2",
+    "aud": [
+      "realm-management",
+      "account"
+    ],
+    "acr": "1",
+    "realm_access": {
+      "roles": [
+        "offline_access",
+        "default-roles-camping-app-realm",
+        "ADMIN",
+        "uma_authorization"
+      ]
+    },
+    "azp": "camping-client",
+    "scope": "profile email",
+    "name": "Mohamed Amine Zbir",
+    "exp": "2024-12-19T22:19:41Z",
+    "iat": "2024-12-19T22:14:41Z",
+    "family_name": "Zbir",
+    "jti": "f513143a-9524-47a9-8f0b-468e32cf8cc7",
+    "email": "user1@gmail.com"
+  }
+}
