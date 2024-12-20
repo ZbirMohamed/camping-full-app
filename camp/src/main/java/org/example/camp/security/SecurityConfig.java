@@ -1,4 +1,4 @@
-package org.example.bookingservice.security;
+package org.example.camp.security;
 
 
 import lombok.NoArgsConstructor;
@@ -16,34 +16,32 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
 
-@Configuration
+
 @EnableWebSecurity
-@NoArgsConstructor
+@Configuration @NoArgsConstructor
 public class SecurityConfig {
 
     @Autowired
     private JwtAuthConverter jwtAuthConverter;
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        return httpSecurity
-                .cors(Customizer.withDefaults())
-                .csrf(csrf->csrf.disable()) //disabling the csrf since we are using a statless security option
-                .headers(h->h.frameOptions(fo->fo.disable())) //let h2-console show the frames
-                //permiting the acces to the following path
-                .authorizeHttpRequests(ar->ar
-                        .requestMatchers("/swagger-ui.html","/swagger-ui/**","/v3/**").permitAll()
-                        .requestMatchers(HttpMethod.GET,"/booking").hasAuthority("ADMIN")
-                        .requestMatchers(HttpMethod.PUT,"/booking/**").hasAuthority("ADMIN")
-                        .requestMatchers(HttpMethod.DELETE,"/booking/**").hasAuthority("ADMIN")
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
+        return httpSecurity.
+                cors(Customizer.withDefaults())
+                .csrf(csrf->csrf.disable())
+                .headers(h->h.frameOptions(fo-> fo.disable())) // ghir l h2
+                .authorizeHttpRequests(
+                        ar->ar.requestMatchers(HttpMethod.GET,"/camp","/camp/**").permitAll()
+                                .requestMatchers("/swagger-ui.html","/swagger-ui/**","/v3/**").permitAll()
+                                .requestMatchers(HttpMethod.POST,"/camp").hasAuthority("ADMIN")
+                                .requestMatchers(HttpMethod.PUT,"/camp/**").hasAuthority("ADMIN")
+                                .requestMatchers(HttpMethod.DELETE,"/camp/**").hasAuthority("ADMIN")
                 )
-                //making sure that all the other paths require auth
                 .authorizeHttpRequests(ar->ar.anyRequest().authenticated())
-                .oauth2ResourceServer(o2-> o2.jwt( jwt-> jwt.jwtAuthenticationConverter(jwtAuthConverter) ))
-            .build();
+                .oauth2ResourceServer(o2->o2.jwt(jwt->jwt.jwtAuthenticationConverter(jwtAuthConverter)))
+                .build();
     }
-    //Cors Configuration to give acces to all browsers
-    //If you use an api gateway you must add it s own configuration
+
     @Bean
     CorsConfigurationSource corsConfigurationSource(){
         CorsConfiguration configuration = new CorsConfiguration();
@@ -55,4 +53,5 @@ public class SecurityConfig {
         source.registerCorsConfiguration("/**",configuration);
         return source;
     }
+
 }
