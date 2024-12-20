@@ -34,7 +34,9 @@ public class SecurityConfig {
                 //permiting the acces to the following path
                 .authorizeHttpRequests(ar->ar
                         .requestMatchers("/swagger-ui.html","/swagger-ui/**","/v3/**").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/booking").hasAuthority("ADMIN")
                         .requestMatchers(HttpMethod.PUT,"/booking/{id}").hasAuthority("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE,"/booking/{id}").hasAuthority("ADMIN")
                 )
                 //making sure that all the other paths require auth
                 .authorizeHttpRequests(ar->ar.anyRequest().authenticated())
